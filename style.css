@@ -16,10 +16,19 @@ body {
 .logo {
   font-weight: bold;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 ul {
   margin: 0;
+  padding: 0;
+}
+
+li {
+
+  list-style-type: none;
+  text-align: center;
+
 }
 
 a {
@@ -28,6 +37,7 @@ a {
   color: #e74c3c;
   display: block;
   padding: 10px 20px;
+  margin-bottom: 2px;
 }
 
 a:hover {
@@ -43,3 +53,66 @@ a:hover {
 	- 640px
 	- 1000px
 */
+
+@media (min-width:640px) {
+
+  .hlavicka {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .menu {
+
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+  }
+
+  li {
+    flex-grow: 1;
+
+  }
+
+  a {
+    margin-bottom: 0;
+    margin-right: 2px;
+  }
+}
+
+
+@media (min-width: 1000px) {
+
+  .hlavicka {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    text-align: left;
+    margin-bottom: 0;
+    align-self: center;
+
+  }
+
+  ul {
+    display: flex;
+    padding: 0;
+
+
+  }
+
+  a {
+
+    margin-bottom: 0;
+    margin-right: 2px;
+  }
+}
